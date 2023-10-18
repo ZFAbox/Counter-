@@ -17,23 +17,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-CV-qQv">
-                                <rect key="frame" x="148" y="426" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="20/10/2023 (11:45:34) Значение увеличилось на +1. Значение счетчика: 1 " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW2-5X-Qg6">
+                                <rect key="frame" x="21" y="58.666666666666657" width="356" height="298"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 42" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPz-He-J5R">
+                                <rect key="frame" x="21" y="376.66666666666669" width="356" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ie1-cN-b8h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piY-k0-vnW">
-                                <rect key="frame" x="16" y="59" width="361" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="wXq-iJ-hlz"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="RpF-SO-QwA"/>
-                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFu-AN-wYb">
+                                <rect key="frame" x="227" y="571.66666666666663" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1cb-OW-fN9"/>
+                                    <constraint firstAttribute="width" secondItem="fFu-AN-wYb" secondAttribute="height" multiplier="1:1" id="ISk-R6-iHb"/>
+                                    <constraint firstAttribute="width" constant="150" id="iai-RA-4fz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="incrementCounterButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SP1-Lu-a0Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-6v-V1l">
+                                <rect key="frame" x="21" y="571.66666666666663" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3wC-IU-LyK"/>
+                                    <constraint firstAttribute="width" constant="150" id="Qg1-2v-qVO"/>
+                                    <constraint firstAttribute="width" secondItem="q0F-6v-V1l" secondAttribute="height" multiplier="1:1" id="eye-pL-94K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decrementCounterButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njs-RM-gLI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54p-lz-pMh">
+                                <rect key="frame" x="121.66666666666669" y="486.66666666666674" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QJG-ny-LKz"/>
+                                    <constraint firstAttribute="height" constant="150" id="qdt-BG-Naw"/>
+                                    <constraint firstAttribute="width" secondItem="54p-lz-pMh" secondAttribute="height" multiplier="1:1" id="vGb-xR-Pi8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="75"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetCounterButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4v9-QA-PfR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bPz-He-J5R" secondAttribute="trailing" constant="16" id="AFL-Oj-Phq"/>
+                            <constraint firstItem="UW2-5X-Qg6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="BGI-Hf-9d3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fFu-AN-wYb" secondAttribute="trailing" constant="16" id="GB3-ki-kZ2"/>
+                            <constraint firstItem="UW2-5X-Qg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" multiplier="0.4" constant="35" id="H9q-9d-wbg"/>
+                            <constraint firstItem="UW2-5X-Qg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="OTv-Kv-Wdl"/>
+                            <constraint firstItem="q0F-6v-V1l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="WfJ-O8-Mcz"/>
+                            <constraint firstItem="bPz-He-J5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="dga-za-W3c"/>
+                            <constraint firstItem="54p-lz-pMh" firstAttribute="top" secondItem="bPz-He-J5R" secondAttribute="bottom" constant="10" id="iLJ-V4-dhQ"/>
+                            <constraint firstItem="q0F-6v-V1l" firstAttribute="top" secondItem="bPz-He-J5R" secondAttribute="bottom" constant="95" id="iyf-K5-dPR"/>
+                            <constraint firstItem="54p-lz-pMh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m1B-u1-Pjo"/>
+                            <constraint firstItem="fFu-AN-wYb" firstAttribute="top" secondItem="bPz-He-J5R" secondAttribute="bottom" constant="95" id="mWu-JN-xCd"/>
+                            <constraint firstItem="bPz-He-J5R" firstAttribute="top" secondItem="UW2-5X-Qg6" secondAttribute="bottom" constant="20" id="xEM-n9-orM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UW2-5X-Qg6" secondAttribute="trailing" constant="16" id="yyJ-i5-tGc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="bPz-He-J5R" id="vTV-Ts-fB2"/>
+                        <outlet property="decrementCounterButton" destination="q0F-6v-V1l" id="hL5-Z6-kQd"/>
+                        <outlet property="historyTextView" destination="UW2-5X-Qg6" id="bou-8X-6Fh"/>
+                        <outlet property="incrementCounterButton" destination="fFu-AN-wYb" id="dG7-1L-EE6"/>
+                        <outlet property="resetCounterButton" destination="54p-lz-pMh" id="fP0-Qk-ozf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,8 +117,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
