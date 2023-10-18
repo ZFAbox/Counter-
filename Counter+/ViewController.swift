@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         updateLabelAndTextView()
     }
     
-    //Создаем действия кнопки увеличения счетчика
+    //Создаем действие кнопки увеличения счетчика
     @IBAction func decrementCounterButtonTap(_ sender: Any) {
         if counter == 0 {
             historyMessage = "Попытка уменьшить значение счётчика ниже 0"
@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         updateLabelAndTextView()
     }
     
+    //Настраиваем действие кнопки сброса счетчика
     @IBAction func resetCounterButtonTap(_ sender: Any) {
         counter = 0
         historyMessage = "Значение сброшено:"
@@ -72,9 +73,10 @@ class ViewController: UIViewController {
     }
     
     func updateLabelAndTextView(){
-        
+        //Обновляем значение счетчика
         counterLabel.text = "Значение счетчика:\n\(counter)"
         
+        //Определяем формат даты
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/mm/yyyy hh:mm:ss"
         let formattedDate = dateFormatter.string(from: Date())
